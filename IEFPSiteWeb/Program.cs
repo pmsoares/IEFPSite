@@ -18,6 +18,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+//Serve para autorizar os users
 app.UseAuthorization();
 
 app.MapControllerRoute(
