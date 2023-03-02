@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace IEFPSiteWeb.Models
 {
@@ -7,10 +8,10 @@ namespace IEFPSiteWeb.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "O campo é de preenchimento obrigatório!")]
         public string Name { get; set; } = null!;
 
-
+        [Display(Name = "Display Order")]
         public int DisplayOrder { get; set; }
 
 
