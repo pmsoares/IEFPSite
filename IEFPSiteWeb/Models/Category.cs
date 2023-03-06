@@ -12,6 +12,7 @@ namespace IEFPSiteWeb.Models
         public string Name { get; set; } = null!;
 
         [Display(Name = "Display Order")]
+        [Range(1, 100, ErrorMessage = "Display Order must be between 1 and 100 only!!")]
         public int DisplayOrder { get; set; }
 
 
