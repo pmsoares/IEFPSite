@@ -1,9 +1,27 @@
 ﻿@if (TempData["success"] != null)
 {
-    <h2>@TempData["success"]</h2>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.options = {
+            "progressBar": true,
+            "positionClass": "toast-top-center"
+        }
+        toastr.success('@TempData["success"]');
+    </script>
 }
 
 @if (TempData["error"] != null)
 {
-    <h2>@TempData["error"]</h2>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        toastr.options = {
+            "progressBar": true,
+            "positionClass": "toast-top-center"
+        }
+        toastr.error('@TempData["error"]');
+    </script>
 }
